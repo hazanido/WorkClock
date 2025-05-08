@@ -5,10 +5,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 
+const router = require('./routes/index.js');
 
-app.get('/', (req, res) => {
-    res.send('Server is running!');
-});
+app.use('/', router);
 
 app.listen(PORT, () => {
     console.log('Server is running on port',+ PORT);
