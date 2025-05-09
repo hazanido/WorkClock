@@ -6,7 +6,9 @@
     "attendance": [
       {
         "date": "05/09/2025",
-        "checkIn": "2025-05-09T17:45:58.7502794"
+        "checkIn": "22:47",
+        "checkOut": "22:53",
+        "counterHour": 0.05
       }
     ]
   },
