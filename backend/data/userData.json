@@ -3,7 +3,9 @@
         "userName": "user1",
         "password": "user11",
         "role": "user",
-        "attendance": []
+        "attendance": [
+            
+        ]
     },
         {
         "userName": "user2",
