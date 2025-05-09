@@ -1,16 +1,19 @@
 [
-    {
-        "userName": "user1",
-        "password": "user11",
-        "role": "user",
-        "attendance": [
-            
-        ]
-    },
-        {
-        "userName": "user2",
-        "password": "user22",
-        "role": "user",
-        "attendance": []
-    }
+  {
+    "userName": "user1",
+    "password": "user11",
+    "role": "user",
+    "attendance": [
+      {
+        "date": "05/09/2025",
+        "checkIn": "2025-05-09T17:45:58.7502794"
+      }
+    ]
+  },
+  {
+    "userName": "user2",
+    "password": "user22",
+    "role": "user",
+    "attendance": []
+  }
 ]
