@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken')
 const dataPath = path.resolve(__dirname, process.env.PATH_DATA);
 
 
@@ -9,6 +10,9 @@ const register = async (req,res)=> {
     try {
 
         const {userName,password} = req.body;
+
+        if(userName == null || password == null)
+            return sendError(res,'User name or password missing');
 
         const dataUser = await fs.readFile(dataPath, 'utf8');
         const users = JSON.parse(dataUser);
@@ -33,7 +37,7 @@ const register = async (req,res)=> {
         res.status(200).json({message:"User created successfully"})
 
     } catch (error) {
-        res.status(400).json({ message: "There is a problem."})
+        res.status(500).json({ success: false, message: "Internal server error" });
     }
 
 }
@@ -42,21 +46,39 @@ const loginUser = async (req,res)=>{
     
     try {
         
-        const {userName,password} = req.body
-        
+        const {userName,password} = req.body;
+
+        if(userName == null || password == null)
+            return res.status(400).json("Bad name or password");
         const datauser = await fs.readFile(dataPath, 'utf8');
         const users = JSON.parse(datauser);
 
-        const user = users.find(user=> user.userName === userName && user.password === password);
-        if(!user) 
-            return res.status(404)
+        const user = users.find(user=> user.userName === userName);
+        if(!user)
+            return res.status(400).json("Bad name or password");
 
-        const token = createToken(user.userName)
+        const matchPassword = await bcrypt.compare(password,user.password);
+        if(!matchPassword)
+            return res.status(400).json("Bad name or password");
 
+        const token = await jwt.sign(
+            {userName: user.userName,
+             role: user.role   
+            },
+            process.env.TOKEN_SECRET,
+            {expiresIn: process.env.TOKEN_EXPIRATION}
+        )
+
+        res.status(200).json({
+            success: true,
+            message: "Login successful",
+            token
+        });
+        
 
 
     } catch (error) {
-        
+        res.status(500).json({ success: false, message: "Internal server error" });
     }
 }
 
