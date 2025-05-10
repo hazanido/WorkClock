@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const {getGermanTime} = require('../services/timeGermanyService');
 const {calculateWorkHours} = require('../services/calculateWorkHours');
-const { checkout } = require('../routes');
+const { create } = require('domain');
 
 const dataPath = path.resolve(__dirname, process.env.PATH_DATA);
 
@@ -29,6 +29,8 @@ const getUser = async (req, res)=> {
      });
    }
 }
+
+
 
 const entryReport = async (req,res)=> {
     

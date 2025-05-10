@@ -3,18 +3,23 @@
     "userName": "user1",
     "password": "user11",
     "role": "user",
-    "attendance": [
-      {
-        "date": "05/09/2025",
-        "checkIn": "22:47",
-        "checkOut": "22:53",
-        "counterHour": 0.05
-      }
-    ]
+    "attendance": []
   },
   {
     "userName": "user2",
     "password": "user22",
+    "role": "user",
+    "attendance": []
+  },
+  {
+    "userName": "admin",
+    "password": "admin11",
+    "role": "admin",
+    "attendance": []
+  },
+  {
+    "userName": "user123",
+    "password": "$2b$10$vYOSwxvCj08KREygSxTENeYZcv9SntsgHWMqYve38Vbci4z2rJ0e6",
     "role": "user",
     "attendance": []
   }
