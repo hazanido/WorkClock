@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { loginRequest } from '../services/authService';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
 const [userName, setUserName] = useState('');
@@ -56,6 +56,9 @@ return (
       </div>
 
       <button type="submit">Login</button>
+        <p style={{ marginTop: '1rem' }}>
+            Don't have an account? <Link to="/register">Register</Link>
+        </p>
     </form>
   </div>
 );

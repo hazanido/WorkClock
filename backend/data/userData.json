@@ -22,5 +22,11 @@
     "password": "$2b$10$vYOSwxvCj08KREygSxTENeYZcv9SntsgHWMqYve38Vbci4z2rJ0e6",
     "role": "user",
     "attendance": []
+  },
+  {
+    "userName": "ido",
+    "password": "$2b$10$yy4fmZrS9ri3/ppo4pdw7.f0BAaH.o9XZMc2n6DTBFYpj.YXw32.W",
+    "role": "user",
+    "attendance": []
   }
 ]
