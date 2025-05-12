@@ -10,9 +10,9 @@ export const reportEntry = async (userName: string, token: string) => {
   return response.data;
 };
 
-export const reportExit = async (userName: string, date: string ,token: string) => {
+export const reportExit = async (userName: string ,token: string) => {
   const response = await axios.post(`${API_URL}/exit`, 
-    {userName, date},
+    {userName},
     {headers: {Authorization: `Bearer ${token}`,},}
   );
   return response.data;

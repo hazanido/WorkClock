@@ -5,13 +5,13 @@
     "role": "user",
     "attendance": [
       {
-        "date": "05/12/2025",
+        "date": "02/12/2025",
         "checkIn": "19:08",
         "checkOut": "19:23",
         "counterHour": 0.25
       },
       {
-        "date": "08/12/2025",
+        "date": "03/12/2025",
         "checkIn": "19:10",
         "checkOut": "19:23",
         "counterHour": 0.22
@@ -28,6 +28,19 @@
     "userName": "ron",
     "password": "$2b$10$SGwAEar6JPOM62BQ9eEHHeWOdAsJp8h48hZ2YF.ddGnuuixhJuSA2",
     "role": "user",
-    "attendance": []
+    "attendance": [
+      {
+        "date": "04/12/2025",
+        "checkIn": "21:03",
+        "checkOut": "21:13",
+        "counterHour": 0.17
+      },
+      {
+        "date": "05/12/2025",
+        "checkIn": "21:14",
+        "checkOut": "21:15",
+        "counterHour": 0.02
+      }
+    ]
   }
 ]

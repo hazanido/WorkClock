@@ -27,9 +27,9 @@ const UserPage: React.FC = () => {
     try {
       if (!userName || !time || !token) return;
 
-      const today = await getTimeGermany()
-      console.log("tody :", today.date);
-      await reportExit(userName, today.date, token);
+      // const today = await getTimeGermany()
+      // console.log("tody :", today.date);
+      await reportExit(userName, token);
 
       alert("Exit recorded");
     } catch (err) {

@@ -72,21 +72,28 @@ const entryReport = async (req,res)=> {
 
 const exitReport = async (req,res)=> {
     try {
-        if (!req.body.date)
-            return res.status(400).json({ success: false, message: "Missing attendance date" });
+        // if (!req.body.date)
+        //     return res.status(400).json({ success: false, message: "Missing attendance date" });
+
+
+        const { userName } = req.body;
+        if (!userName) 
+            return res.status(400).json({ success: false, message: "Missing userName" });
+            
 
         const dataUser = await fs.readFile(dataPath,'utf8');
         const users = JSON.parse(dataUser);
         const userChange = users.find(user=> user.userName === req.body.userName);
         if(!userChange)
             return res.status(404).json({success: false, message: "Not found user" });
-    
-        const exitDate = userChange.attendance.find(exit=> exit.date === req.body.date && !exit.checkOut);
+        
+        const nowDate = await getGermanTime();
+
+          const exitDate = userChange.attendance.find(exit => exit.date === nowDate.date && !exit.checkOut);
 
         if(!exitDate)
             return res.status(404).json({success: false, message: "Not found date"});
     
-        const nowDate = await getGermanTime();
     
         exitDate.checkOut = nowDate.time;
         exitDate.counterHour = calculateWorkHours(exitDate.checkIn, nowDate.time)
