@@ -20,7 +20,7 @@
   {
     "userName": "user123",
     "password": "$2b$10$vYOSwxvCj08KREygSxTENeYZcv9SntsgHWMqYve38Vbci4z2rJ0e6",
-    "role": "user",
+    "role": "admin",
     "attendance": []
   },
   {
@@ -30,10 +30,28 @@
     "attendance": [
       {
         "date": "05/12/2025",
-        "checkIn": "15:44",
-        "checkOut": "17:11",
-        "counterHour": 1.45
+        "checkIn": "19:08",
+        "checkOut": "19:23",
+        "counterHour": 0.25
+      },
+      {
+        "date": "05/12/2025",
+        "checkIn": "19:10",
+        "checkOut": "19:23",
+        "counterHour": 0.25
+      },
+      {
+        "date": "08/12/2025",
+        "checkIn": "19:10",
+        "checkOut": "19:23",
+        "counterHour": 0.22
       }
     ]
+  },
+  {
+    "userName": "user1234",
+    "password": "$2b$10$8QJCV2AHXKW9rAfXp2CEoeDtQ0UsQv5edOisQB3aXIfBG6XGj1.UK",
+    "role": "admin",
+    "attendance": []
   }
 ]

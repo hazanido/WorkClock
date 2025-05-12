@@ -6,7 +6,8 @@ const user = require ('../controllers/user.js');
 
 router.get('/',authMiddleware ,user.getUser);
 
-router.post('/entry', user.entryReport);
-router.post('/exit', user.exitReport);
+router.post('/entry',authMiddleware, user.entryReport);
+router.post('/exit',authMiddleware, user.exitReport);
+router.put('/update',authMiddleware,isAdmin,user.updateReport);
 
 module.exports = router;
