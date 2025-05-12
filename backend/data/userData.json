@@ -1,29 +1,5 @@
 [
   {
-    "userName": "user1",
-    "password": "user11",
-    "role": "user",
-    "attendance": []
-  },
-  {
-    "userName": "user2",
-    "password": "user22",
-    "role": "user",
-    "attendance": []
-  },
-  {
-    "userName": "admin",
-    "password": "admin11",
-    "role": "admin",
-    "attendance": []
-  },
-  {
-    "userName": "user123",
-    "password": "$2b$10$vYOSwxvCj08KREygSxTENeYZcv9SntsgHWMqYve38Vbci4z2rJ0e6",
-    "role": "admin",
-    "attendance": []
-  },
-  {
     "userName": "ido",
     "password": "$2b$10$yy4fmZrS9ri3/ppo4pdw7.f0BAaH.o9XZMc2n6DTBFYpj.YXw32.W",
     "role": "user",
@@ -31,12 +7,6 @@
       {
         "date": "05/12/2025",
         "checkIn": "19:08",
-        "checkOut": "19:23",
-        "counterHour": 0.25
-      },
-      {
-        "date": "05/12/2025",
-        "checkIn": "19:10",
         "checkOut": "19:23",
         "counterHour": 0.25
       },
@@ -49,9 +19,15 @@
     ]
   },
   {
-    "userName": "user1234",
+    "userName": "admin",
     "password": "$2b$10$8QJCV2AHXKW9rAfXp2CEoeDtQ0UsQv5edOisQB3aXIfBG6XGj1.UK",
     "role": "admin",
+    "attendance": []
+  },
+  {
+    "userName": "ron",
+    "password": "$2b$10$SGwAEar6JPOM62BQ9eEHHeWOdAsJp8h48hZ2YF.ddGnuuixhJuSA2",
+    "role": "user",
     "attendance": []
   }
 ]
