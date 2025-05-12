@@ -27,6 +27,13 @@
     "userName": "ido",
     "password": "$2b$10$yy4fmZrS9ri3/ppo4pdw7.f0BAaH.o9XZMc2n6DTBFYpj.YXw32.W",
     "role": "user",
-    "attendance": []
+    "attendance": [
+      {
+        "date": "05/12/2025",
+        "checkIn": "15:44",
+        "checkOut": "17:11",
+        "counterHour": 1.45
+      }
+    ]
   }
 ]

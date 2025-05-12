@@ -16,8 +16,8 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   try {
     const data = await loginRequest(userName, password);
-    auth.login(data.token, data.role);
-
+    auth.login(data.token, data.role, userName);
+    
     
     if (data.role === 'admin') {
       navigate('/admin');
