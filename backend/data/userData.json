@@ -40,6 +40,12 @@
         "checkIn": "21:14",
         "checkOut": "21:15",
         "counterHour": 0.02
+      },
+      {
+        "date": "05/13/2025",
+        "checkIn": "11:26",
+        "checkOut": "12:33",
+        "counterHour": 1.12
       }
     ]
   }

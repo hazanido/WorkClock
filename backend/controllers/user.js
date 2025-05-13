@@ -47,6 +47,11 @@ const entryReport = async (req,res)=> {
         
         const nowDate = await getGermanTime();
 
+
+        const chakeEntryDate = userChange.attendance.find(entryChake => entryChake.date === nowDate.date && !entryChake.checkOut);
+        if(chakeEntryDate)
+            return res.status(404).json({success: false, message: "There is an entrance without an exit."});
+
         userChange.attendance.push({
             date: nowDate.date,
             checkIn: nowDate.time,
@@ -89,7 +94,7 @@ const exitReport = async (req,res)=> {
         
         const nowDate = await getGermanTime();
 
-          const exitDate = userChange.attendance.find(exit => exit.date === nowDate.date && !exit.checkOut);
+        const exitDate = userChange.attendance.find(exit => exit.date === nowDate.date && !exit.checkOut);
 
         if(!exitDate)
             return res.status(404).json({success: false, message: "Not found date"});
